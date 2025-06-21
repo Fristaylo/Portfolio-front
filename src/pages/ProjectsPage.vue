@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Project from '../components/Project.vue';
+import Project from '../components/ProjectCard.vue';
 import { projects } from '../data/projects';
 </script>
 
