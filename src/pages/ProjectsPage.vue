@@ -8,7 +8,3 @@
 <script setup lang="ts">
 // Логика для страницы проектов
 </script>
-
-<style scoped>
-/* Стили для страницы проектов */
-</style>

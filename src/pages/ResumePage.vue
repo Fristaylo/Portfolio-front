@@ -8,7 +8,3 @@
 <script setup lang="ts">
 // Логика для страницы резюме
 </script>
-
-<style scoped>
-/* Стили для страницы резюме */
-</style>

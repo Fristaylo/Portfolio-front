@@ -8,7 +8,3 @@
 <script setup lang="ts">
 // Логика для страницы контактов
 </script>
-
-<style scoped>
-/* Стили для страницы контактов */
-</style>
