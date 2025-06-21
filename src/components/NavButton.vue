@@ -12,7 +12,6 @@ const props = defineProps({
 		type: String,
 		required: false,
 	},
-	// Изменено: теперь ожидаем строковое имя иконки
 	iconName: {
 		type: String,
 		required: false,
@@ -20,7 +19,7 @@ const props = defineProps({
 	iconSize: {
 		type: [String, Number],
 		required: false,
-		default: 18,
+		default: 16,
 	},
 });
 </script>
@@ -28,14 +27,13 @@ const props = defineProps({
 <template>
 	<router-link
 		:to="to"
-		class="flex items-center font-medium text-gray-600 text-lg hover:text-blue-600 transition duration-300"
+		class="flex items-center font-medium text-gray-600 text-lg hover:text-blue-600 transition duration-200 group"
 	>
-		<!-- Изменено: передаем iconName в компонент Svg -->
 		<Svg
 			v-if="iconName"
 			:icon="iconName"
 			:size="Number(iconSize)"
-			class="mr-1"
+			class="mr-1 fill-gray-600 group-hover:fill-blue-600 transition duration-200"
 		></Svg>
 		<span>{{ text }}</span>
 	</router-link>

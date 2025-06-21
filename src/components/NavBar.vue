@@ -10,19 +10,19 @@ import NavButton from './NavButton.vue';
 		>
 			<router-link
 				to="/"
-				class="flex text-2xl items-center font-bold text-gray-800 gap-1 hover:text-blue-600 transition duration-300 group"
+				class="flex text-2xl items-center font-bold text-gray-800 gap-1 hover:text-blue-600 transition duration-200 group"
 			>
 				<Svg
 					icon="logo"
 					:size="24"
-					svgClass="fill-gray-800 group-hover:fill-blue-600 transition duration-300"
+					svgClass="fill-gray-800 group-hover:fill-blue-600 transition duration-200"
 				></Svg>
 				AGoncharenko
 			</router-link>
 			<div class="hidden md:flex space-x-6">
-				<NavButton to="/" text="Главная" iconName="logo" />
-				<NavButton to="/projects" text="Проекты" iconName="briefcase" />
-				<NavButton to="/resume" text="Резюме" iconName="filestar" />
+				<NavButton to="/" text="Главная" iconName="home" />
+				<NavButton to="/projects" text="Проекты" iconName="cases" />
+				<NavButton to="/resume" text="Резюме" iconName="file" />
 				<NavButton to="/contact" text="Контакты" iconName="email" />
 			</div>
 		</div>
@@ -33,8 +33,8 @@ import NavButton from './NavButton.vue';
 			class="container mx-auto px-4 py-2 flex justify-around items-center"
 		>
 			<NavButton to="/" iconName="home" :iconSize="28" />
-			<NavButton to="/projects" iconName="briefcase" :iconSize="28" />
-			<NavButton to="/resume" iconName="filestar" :iconSize="28" />
+			<NavButton to="/projects" iconName="cases" :iconSize="28" />
+			<NavButton to="/resume" iconName="file" :iconSize="28" />
 			<NavButton to="/contact" iconName="email" :iconSize="28" />
 		</div>
 	</nav>
