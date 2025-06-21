@@ -1,14 +1,18 @@
 <script setup lang="ts">
 import Project from '../components/Project.vue';
+import { projects } from '../data/projects';
 </script>
 
 <template>
 	<div class="p-4">
-		<h2 class="text-2xl mb-5 font-bold">Проекты в работе</h2>
+		<h2 class="text-3xl mb-5 font-bold text-center">Проекты в работе</h2>
 
-		<Project />
-		<Project />
-		<Project />
-		<Project class="!mb-0" />
+		<div class="grid md:grid-cols-1 lg:grid-cols-2 gap-4">
+			<Project
+				v-for="project in projects"
+				:key="project.id"
+				:project="project"
+			/>
+		</div>
 	</div>
 </template>

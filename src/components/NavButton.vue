@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
 import { RouterLink } from 'vue-router';
+import Svg from './Svg.vue';
 
 const props = defineProps({
 	to: {
@@ -11,8 +12,9 @@ const props = defineProps({
 		type: String,
 		required: false,
 	},
-	icon: {
-		type: Object,
+	// Изменено: теперь ожидаем строковое имя иконки
+	iconName: {
+		type: String,
 		required: false,
 	},
 	iconSize: {
@@ -28,7 +30,13 @@ const props = defineProps({
 		:to="to"
 		class="flex items-center font-medium text-gray-600 text-lg hover:text-blue-600 transition duration-300"
 	>
-		<component :is="icon" :size="iconSize" class="mr-1" />
+		<!-- Изменено: передаем iconName в компонент Svg -->
+		<Svg
+			v-if="iconName"
+			:icon="iconName"
+			:size="Number(iconSize)"
+			class="mr-1"
+		></Svg>
 		<span>{{ text }}</span>
 	</router-link>
 </template>

@@ -1,10 +1,6 @@
 <script setup lang="ts">
+import Svg from './Svg.vue';
 import NavButton from './NavButton.vue';
-import HomeIcon from 'vue-material-design-icons/Home.vue';
-import PotIcon from 'vue-material-design-icons/Pot.vue';
-import BriefCaseIcon from 'vue-material-design-icons/BriefCase.vue';
-import EmailIcon from 'vue-material-design-icons/Email.vue';
-import FileStarIcon from 'vue-material-design-icons/FileStar.vue';
 </script>
 
 <template>
@@ -12,20 +8,22 @@ import FileStarIcon from 'vue-material-design-icons/FileStar.vue';
 		<div
 			class="container mx-auto px-4 py-3 flex justify-between items-center"
 		>
-			<div
-				class="flex text-2xl items-center font-bold text-gray-800 gap-1"
+			<router-link
+				to="/"
+				class="flex text-2xl items-center font-bold text-gray-800 gap-1 hover:text-blue-600 transition duration-300 group"
 			>
-				<PotIcon size="28" />AGoncharenko
-			</div>
+				<Svg
+					icon="logo"
+					:size="24"
+					svgClass="fill-gray-800 group-hover:fill-blue-600 transition duration-300"
+				></Svg>
+				AGoncharenko
+			</router-link>
 			<div class="hidden md:flex space-x-6">
-				<NavButton to="/" text="Главная" :icon="HomeIcon" />
-				<NavButton
-					to="/projects"
-					text="Проекты"
-					:icon="BriefCaseIcon"
-				/>
-				<NavButton to="/resume" text="Резюме" :icon="FileStarIcon" />
-				<NavButton to="/contact" text="Контакты" :icon="EmailIcon" />
+				<NavButton to="/" text="Главная" iconName="logo" />
+				<NavButton to="/projects" text="Проекты" iconName="briefcase" />
+				<NavButton to="/resume" text="Резюме" iconName="filestar" />
+				<NavButton to="/contact" text="Контакты" iconName="email" />
 			</div>
 		</div>
 	</nav>
@@ -34,10 +32,10 @@ import FileStarIcon from 'vue-material-design-icons/FileStar.vue';
 		<div
 			class="container mx-auto px-4 py-2 flex justify-around items-center"
 		>
-			<NavButton to="/" :icon="HomeIcon" :iconSize="28" />
-			<NavButton to="/projects" :icon="BriefCaseIcon" :iconSize="28" />
-			<NavButton to="/resume" :icon="FileStarIcon" :iconSize="28" />
-			<NavButton to="/contact" :icon="EmailIcon" :iconSize="28" />
+			<NavButton to="/" iconName="home" :iconSize="28" />
+			<NavButton to="/projects" iconName="briefcase" :iconSize="28" />
+			<NavButton to="/resume" iconName="filestar" :iconSize="28" />
+			<NavButton to="/contact" iconName="email" :iconSize="28" />
 		</div>
 	</nav>
 </template>
