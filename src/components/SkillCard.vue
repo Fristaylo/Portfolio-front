@@ -22,7 +22,7 @@ const props = defineProps<{
 		<p>{{ props.skill.description }}</p>
 		<div class="flex items-center gap-2">
 			<p class="font-medium">Навык</p>
-			<div class="w-full h-2 bg-gray-200 rounded-md">
+			<div class="w-full h-2 bg-gray-200 rounded-md mt-1">
 				<div
 					class="h-full rounded-md"
 					:style="{
