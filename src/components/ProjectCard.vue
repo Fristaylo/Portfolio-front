@@ -10,10 +10,8 @@ const props = defineProps<{
 </script>
 
 <template>
-	<Block class="cursor-pointer block">
-		<router-link
-			:to="{ name: 'project', params: { projectId: project.id } }"
-		>
+	<router-link :to="{ name: 'project', params: { projectId: project.id } }">
+		<Block :isLink="true" class="block">
 			<h3 class="text-2xl font-bold mb-5">{{ project.title }}</h3>
 
 			<Image
@@ -27,6 +25,6 @@ const props = defineProps<{
 				<span class="font-semibold">Технологии:</span>
 				{{ project.technologies.join(', ') }}
 			</p>
-		</router-link>
-	</Block>
+		</Block>
+	</router-link>
 </template>

@@ -53,4 +53,8 @@ watch(
 			Посмотреть проект
 		</a>
 	</div>
+	<div v-else>
+		<PageTitle icon="alert" title="Проект не найден" />
+		<p>Запрошенный проект не существует.</p>
+	</div>
 </template>
