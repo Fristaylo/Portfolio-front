@@ -12,7 +12,7 @@ const props = defineProps<{
 		<div class="flex items-center gap-3">
 			<div
 				v-html="props.skill.icon"
-				:style="{ width: '25px', height: '25px' }"
+				:style="{ width: '23px', height: '23px' }"
 			></div>
 
 			<h2 class="font-bold text-gray-600 text-2xl">
@@ -21,14 +21,22 @@ const props = defineProps<{
 		</div>
 		<p>{{ props.skill.description }}</p>
 		<div class="flex items-center gap-2">
-			<p class="font-medium">Скилл</p>
+			<p class="font-medium">Навык</p>
 			<div class="w-full h-2 bg-gray-200 rounded-md">
 				<div
-					class="h-full bg-orange-500 rounded-md"
-					:style="{ width: props.skill.level + '%' }"
+					class="h-full rounded-md"
+					:style="{
+						width: props.skill.level + '%',
+						backgroundColor: props.skill.color,
+					}"
 				></div>
 			</div>
-			<p class="font-medium">{{ props.skill.level }}%</p>
+			<p
+				class="font-medium text-shadow-md"
+				:style="{ color: props.skill.color }"
+			>
+				{{ props.skill.level }}%
+			</p>
 		</div>
 	</Block>
 </template>
