@@ -4,9 +4,9 @@ import NavButton from './NavButton.vue';
 </script>
 
 <template>
-	<nav class="bg-white shadow-md">
+	<Header class="bg-white shadow-md sticky top-0 z-10">
 		<div
-			class="container mx-auto px-4 py-3 flex justify-between items-center"
+			class="container mx-auto px-8 py-3 flex justify-between items-center"
 		>
 			<router-link
 				to="/"
@@ -19,22 +19,24 @@ import NavButton from './NavButton.vue';
 				></Svg>
 				AGoncharenko
 			</router-link>
-			<div class="hidden md:flex space-x-6">
+			<div class="hidden lg:flex space-x-6">
 				<NavButton to="/" text="Главная" iconName="home" />
 				<NavButton to="/projects" text="Проекты" iconName="cases" />
 				<NavButton to="/resume" text="Резюме" iconName="file" />
+				<NavButton to="/skills" text="Навыки" iconName="puzzle" />
 				<NavButton to="/contact" text="Контакты" iconName="email" />
 			</div>
 		</div>
-	</nav>
+	</Header>
 
-	<nav class="fixed bottom-0 left-0 right-0 bg-white shadow-lg md:hidden">
+	<nav class="fixed bottom-0 left-0 right-0 bg-white shadow-lg lg:hidden">
 		<div
 			class="container mx-auto px-4 py-2 flex justify-around items-center"
 		>
 			<NavButton to="/" iconName="home" :iconSize="28" />
 			<NavButton to="/projects" iconName="cases" :iconSize="28" />
 			<NavButton to="/resume" iconName="file" :iconSize="28" />
+			<NavButton to="/skills" iconName="puzzle" :iconSize="28" />
 			<NavButton to="/contact" iconName="email" :iconSize="28" />
 		</div>
 	</nav>
