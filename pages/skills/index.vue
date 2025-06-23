@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import PageTitle from '../src/components/PageTitle.vue';
-import SkillCard from '../src/components/SkillCard.vue';
-import { skills } from '../src/data/skill';
+import PageTitle from '../../src/components/PageTitle.vue';
+import SkillCard from '../../src/components/SkillCard.vue';
+import { skills } from '../../src/data/skill';
 </script>
 
 <template>
