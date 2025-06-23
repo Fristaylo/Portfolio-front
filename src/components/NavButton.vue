@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { defineProps } from 'vue';
-import { RouterLink } from 'vue-router';
 import Svg from './Svg.vue';
 
 const props = defineProps({

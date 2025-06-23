@@ -5,7 +5,7 @@ const currentYear = ref(new Date().getFullYear());
 </script>
 
 <template>
-	<Footer
+	<footer
 		class="flex bg-gray-200 min-h-40 w-full mt-20 mb-11 flex-col md:mb-0"
 	>
 		<div class="flex flex-1"></div>
@@ -15,5 +15,5 @@ const currentYear = ref(new Date().getFullYear());
 				© 2025-{{ currentYear }} AGoncharenko. Все права защищены.
 			</p>
 		</div>
-	</Footer>
+	</footer>
 </template>

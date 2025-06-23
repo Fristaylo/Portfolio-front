@@ -4,7 +4,7 @@ import NavButton from './NavButton.vue';
 </script>
 
 <template>
-	<Header class="bg-white shadow-md sticky top-0 z-10">
+	<header class="bg-white shadow-md sticky top-0 z-10">
 		<div
 			class="container mx-auto px-8 py-3 flex justify-between items-center"
 		>
@@ -27,7 +27,7 @@ import NavButton from './NavButton.vue';
 				<NavButton to="/contact" text="Контакты" iconName="email" />
 			</div>
 		</div>
-	</Header>
+	</header>
 
 	<nav class="fixed bottom-0 left-0 right-0 bg-white shadow-lg lg:hidden">
 		<div
