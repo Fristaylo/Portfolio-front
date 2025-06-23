@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { projects } from '../src/data/projects';
-import PageTitle from '../src/components/PageTitle.vue';
-import ProjectCard from '../src/components/ProjectCard.vue';
+import { projects } from '../../src/data/projects';
+import PageTitle from '../..//src/components/PageTitle.vue';
+import ProjectCard from '../../src/components/ProjectCard.vue';
 </script>
 
 <template>

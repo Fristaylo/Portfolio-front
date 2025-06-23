@@ -6,7 +6,7 @@ import Image from '../../src/components/Image.vue';
 import PageTitle from '../../src/components/PageTitle.vue';
 
 const route = useRoute();
-const projectId = ref(route.params.projectId as string);
+const projectId = ref(route.params.id as string);
 const projectData = ref<Project | null>(null);
 
 const fetchProjectData = (id: string) => {
@@ -19,7 +19,7 @@ const fetchProjectData = (id: string) => {
 fetchProjectData(projectId.value);
 
 watch(
-	() => route.params.projectId,
+	() => route.params.id,
 	(newProjectId) => {
 		projectId.value = newProjectId as string;
 		fetchProjectData(projectId.value);

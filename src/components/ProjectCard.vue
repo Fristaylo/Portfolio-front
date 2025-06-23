@@ -9,7 +9,7 @@ const props = defineProps<{
 </script>
 
 <template>
-	<NuxtLink :to="{ name: 'project-id', params: { id: project.id } }">
+	<NuxtLink :to="{ name: 'projects-id', params: { id: project.id } }">
 		<Block :isLink="true" class="block">
 			<h3 class="text-2xl font-bold mb-5">{{ project.title }}</h3>
 
