@@ -1,10 +1,10 @@
 export interface Skill {
 	id: string;
-	icon: string; // Название иконки SVG или полный SVG код
+	icon: string;
 	title: string;
 	description: string;
-	level: number; // Уровень навыка в процентах
-	color: string; // Цвет для полоски уровня
+	level: number;
+	color: string;
 }
 
 export const skills: Skill[] = [

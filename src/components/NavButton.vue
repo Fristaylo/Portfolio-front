@@ -25,7 +25,7 @@ const props = defineProps({
 </script>
 
 <template>
-	<router-link
+	<NuxtLink
 		:to="to"
 		class="flex items-center font-medium text-gray-600 text-lg hover:text-blue-600 transition duration-200 group"
 	>
@@ -36,5 +36,5 @@ const props = defineProps({
 			class="mr-1 fill-gray-600 group-hover:fill-blue-600 transition duration-200"
 		></Svg>
 		<span>{{ text }}</span>
-	</router-link>
+	</NuxtLink>
 </template>

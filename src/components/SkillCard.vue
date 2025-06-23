@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-	<router-link :to="{ name: 'skill', params: { skillId: props.skill.id } }">
+	<NuxtLink :to="{ name: 'skill-id', params: { id: props.skill.id } }">
 		<Block :isLink="true" class="flex gap-5 flex-col">
 			<div class="flex items-center gap-3">
 				<div
@@ -40,5 +40,5 @@ const props = defineProps<{
 				</p>
 			</div>
 		</Block>
-	</router-link>
+	</NuxtLink>
 </template>

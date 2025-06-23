@@ -10,7 +10,7 @@ const props = defineProps<{
 </script>
 
 <template>
-	<router-link :to="{ name: 'project', params: { projectId: project.id } }">
+	<NuxtLink :to="{ name: 'project-id', params: { id: project.id } }">
 		<Block :isLink="true" class="block">
 			<h3 class="text-2xl font-bold mb-5">{{ project.title }}</h3>
 
@@ -26,5 +26,5 @@ const props = defineProps<{
 				{{ project.technologies.join(', ') }}
 			</p>
 		</Block>
-	</router-link>
+	</NuxtLink>
 </template>

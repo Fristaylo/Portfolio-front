@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router';
+import { useRoute } from 'vue-router'; // Nuxt provides useRoute as a composable
 import { ref, watch } from 'vue';
-import { projects, type Project } from '../data/projects';
-import Image from '../components/Image.vue';
+import { projects, type Project } from '../../src/data/projects';
+import Image from '../../src/components/Image.vue';
+import PageTitle from '../../src/components/PageTitle.vue';
 
 const route = useRoute();
 const projectId = ref(route.params.projectId as string);

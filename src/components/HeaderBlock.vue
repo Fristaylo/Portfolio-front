@@ -8,7 +8,7 @@ import NavButton from './NavButton.vue';
 		<div
 			class="container mx-auto px-8 py-3 flex justify-between items-center"
 		>
-			<router-link
+			<NuxtLink
 				to="/"
 				class="flex text-2xl items-center font-bold text-gray-800 gap-1 hover:text-blue-600 transition duration-200 group"
 			>
@@ -18,7 +18,7 @@ import NavButton from './NavButton.vue';
 					svgClass="fill-gray-800 group-hover:fill-blue-600 transition duration-200"
 				></Svg>
 				AGoncharenko
-			</router-link>
+			</NuxtLink>
 			<div class="hidden lg:flex space-x-6">
 				<NavButton to="/" text="Главная" iconName="home" />
 				<NavButton to="/projects" text="Проекты" iconName="cases" />
