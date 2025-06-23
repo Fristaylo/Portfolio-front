@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
 import { type Project } from '../data/projects';
 import Image from '../components/Image.vue';
 import Block from '../components/Block.vue';
