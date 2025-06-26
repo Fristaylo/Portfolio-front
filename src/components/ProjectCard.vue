@@ -2,6 +2,7 @@
 import { type Project } from '../data/projects';
 import Image from '../components/Image.vue';
 import Block from '../components/Block.vue';
+import SkillBubble from './SkillBubble.vue';
 
 const props = defineProps<{
 	project: Project;
@@ -10,7 +11,7 @@ const props = defineProps<{
 
 <template>
 	<NuxtLink :to="{ name: 'projects-id', params: { id: project.id } }">
-		<Block :isLink="true" class="block">
+		<Block :isLink="true" class="h-full flex flex-col">
 			<h3 class="text-2xl font-bold mb-5">{{ project.title }}</h3>
 
 			<Image
@@ -20,10 +21,13 @@ const props = defineProps<{
 			/>
 
 			<p class="mb-3">{{ project.description }}</p>
-			<p class="text-sm text-gray-600">
-				<span class="font-semibold">Технологии:</span>
-				{{ project.technologies.join(', ') }}
-			</p>
+			<div class="flex gap-2 flex-wrap mt-auto">
+				<SkillBubble
+					v-for="techId in project.technologies"
+					:key="techId"
+					:id="techId"
+				/>
+			</div>
 		</Block>
 	</NuxtLink>
 </template>

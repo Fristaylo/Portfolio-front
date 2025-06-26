@@ -4,6 +4,7 @@ import { ref, watch } from 'vue';
 import { projects, type Project } from '../../src/data/projects';
 import Image from '../../src/components/Image.vue';
 import PageTitle from '../../src/components/PageTitle.vue';
+import SkillBubble from '../../src/components/SkillBubble.vue';
 
 const route = useRoute();
 const projectId = ref(route.params.id as string);
@@ -29,7 +30,7 @@ watch(
 
 <template>
 	<div v-if="projectData">
-		<h2 class="text-2xl mb-5 font-bold">{{ projectData.title }}</h2>
+		<h1 class="text-3xl mb-5 font-bold">{{ projectData.title }}</h1>
 		<p class="mb-3">{{ projectData.description }}</p>
 		<p v-if="projectData.fullDescription" class="mb-3">
 			{{ projectData.fullDescription }}
@@ -41,10 +42,14 @@ watch(
 			class="mb-3 max-w-full h-auto min-h-80 rounded-lg shadow-md"
 		/>
 
-		<p class="mb-3">
-			<span class="font-semibold">Технологии:</span>
-			{{ projectData.technologies.join(', ') }}
-		</p>
+		<h3 class="text-lg font-semibold mb-1">Используемые технологии</h3>
+		<div class="flex gap-2 flex-wrap mb-3">
+			<SkillBubble
+				v-for="techId in projectData.technologies"
+				:key="techId"
+				:id="techId"
+			/>
+		</div>
 		<a
 			v-if="projectData.link"
 			:href="projectData.link"

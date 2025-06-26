@@ -17,7 +17,7 @@ export const projects: Project[] = [
 			'Здесь может быть более подробное описание с деталями реализации, использованными технологиями и особенностями проекта.',
 		imageUrl: '',
 		link: 'https://yummyani.me',
-		technologies: ['React', 'TypeScript', 'SCSS', 'Vite', 'Docker'],
+		technologies: ['react', 'typescript', 'sass', 'vite', 'docker'],
 	},
 	{
 		id: 'yamkatv',
@@ -26,24 +26,17 @@ export const projects: Project[] = [
 		fullDescription:
 			'Этот проект демонстрирует другие аспекты моих навыков, возможно, с использованием другого стека технологий.',
 		imageUrl: '',
-		link: 'https://example.com/another-project',
-		technologies: ['React', 'TypeScript', 'SCSS', 'Vite'],
+		link: 'https://yamka.tv',
+		technologies: ['react', 'typescript', 'sass', 'vite'],
 	},
 	{
-		id: 'portfolio-website',
-		title: 'Сайт-Портфолио',
-		description: 'Этот сайт, который вы сейчас просматриваете.',
+		id: 'agoncharenko',
+		title: 'AGoncharenko',
+		description: 'Сайт-партфолио, который вы сейчас просматриваете.',
 		fullDescription:
 			'Разработан для демонстрации моих навыков веб-разработки, включая Vue.js, TypeScript, маршрутизацию и управление состоянием.',
 		imageUrl: '',
-		link: 'https://github.com/your-username/portfolio-front',
-		technologies: [
-			'Vue.js',
-			'TypeScript',
-			'Vue Router',
-			'Vite',
-			'SCSS',
-			'Tailwindcss',
-		],
+		link: 'https://agoncharenko.dev',
+		technologies: ['vue', 'typescript', 'nuxt', 'vite', 'sass', 'tailwind'],
 	},
 ];
